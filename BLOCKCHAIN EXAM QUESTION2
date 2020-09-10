@@ -1,0 +1,27 @@
+pragma solidity 0.4.18 <= 0.6.12;
+contract Hotel{
+    string customerName;
+    string customerAddrs; 
+    int quantity;
+    int money;
+    
+    
+    function Hotel(string newcustomerName, string newcustomerAddrs, 
+     int newQuantity, int newMoney) public {
+        
+        customerName = newcustomerName;
+        customerAddrs=newcustomerAddrs;
+        quantity=newQuantity;
+        money=newMoney;
+        
+    }
+    function getHotel() public view returns(string,string,int,int)
+    {
+        return(customerName,customerAddrs,quantity,money);
+    }
+    function setHotel(int newQuantity, int newMoney) public{
+        quantity=newQuantity;
+        money=newMoney;
+        
+    }
+}
